@@ -38,7 +38,7 @@ body,
   width: 8rem;
   height: 1rem;
   background-color: rgb(56, 53, 53);
-  border-radius: 0.5rem;
+  border-radius: 5rem;
   z-index: 3;
 }
 
@@ -65,7 +65,7 @@ animation-play-state: running
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-fill-mode: none;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 @keyframes drop-down {
   from {
@@ -75,6 +75,12 @@ animation-play-state: running
     bottom: 45vh;
     background-color: coral;
   }
+}
+.menu-first .bars {
+  background-color: blue;
+  height: 2rem;
+  width: 2rem;
+  /* position: absolute; */
 }
 
 /* second menu */
@@ -87,7 +93,7 @@ animation-play-state: running
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-fill-mode: none;
-  animation-play-state: paused;
+  animation-play-state: running;
   transform: rotate(-180deg);
   transition-duration: 2s;
 }
@@ -98,7 +104,7 @@ animation-play-state: running
   }
   to {
     bottom: 45vh;
-    left: 10vw;
+    left: 17vw;
     background-color: green;
   }
 }
@@ -106,10 +112,10 @@ animation-play-state: running
 /* third menu */
 .menu-third {
   position: relative;
-  background-color: teal;
+  /* background-color: teal; */
   z-index: 5;
   animation-name: from-top;
-  animation-duration: 1s;
+  animation-duration: 1.7s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -128,14 +134,13 @@ animation-play-state: running
 }
 .menu-third::before {
   content: "";
-  background-color: violet;
+  /* background-color: violet; */
   position: absolute;
   width: 10rem;
   height: 10rem;
-  /* transform: translateY(-1%); */
   z-index: -1;
   animation-name: from-right-before;
-  animation-duration: 1s;
+  animation-duration: 1.7s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: 1;
