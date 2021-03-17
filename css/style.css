@@ -9,3 +9,145 @@
 body {
   height: 100vh;
 }
+/* shared flex properties */
+body,
+.menus-container,
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* hamburger menus */
+.menus-container {
+  width: 31vw;
+  height: 30vw;
+  border: brown solid 3px;
+  /* position: absolute; */
+}
+.menu {
+  width: 10rem;
+  height: 10rem;
+  background-color: skyblue;
+  padding: 1rem;
+  /* position: relative; */
+}
+/* moving box always needs position:absolute ?????*/
+
+.bars {
+  width: 8rem;
+  height: 1rem;
+  background-color: rgb(56, 53, 53);
+  border-radius: 0.5rem;
+  z-index: 3;
+}
+
+/* animations */
+/* 
+for shorthand in this order?:
+animation-name: none
+animation-duration: 0s
+animation-timing-function: ease
+animation-delay: 0s
+animation-iteration-count: 1
+animation-direction: normal
+animation-fill-mode: none
+animation-play-state: running 
+*/
+
+/* first menu */
+.menu-first {
+  position: relative;
+  animation-name: drop-down;
+  animation-duration: 2.4s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: none;
+  animation-play-state: paused;
+}
+@keyframes drop-down {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 40vh;
+    background-color: coral;
+  }
+}
+
+/* second menu */
+.menu-second {
+  position: relative;
+  animation-name: diagonal;
+  animation-duration: 2.1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: none;
+  animation-play-state: paused;
+  transform: rotate(-180deg);
+  transition-duration: 2s;
+}
+@keyframes diagonal {
+  from {
+    bottom: 0;
+    left: 0;
+  }
+  to {
+    bottom: 40vh;
+    left: 10vw;
+    background-color: green;
+  }
+}
+
+/* third menu */
+.menu-third {
+  position: relative;
+  z-index: 2;
+  background-color: teal;
+  animation-name: from-right;
+  animation-duration: 2.3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+@keyframes from-right {
+  from {
+    left: 0;
+  }
+  to {
+    left: 45vw;
+    background-color: yellow;
+  }
+}
+
+.menu-third::before {
+  content: "";
+  background-color: violet;
+  position: absolute;
+  transform: translateY(-1%);
+  z-index: 1;
+  /* animation-name: from-right-before;
+  animation-duration: 2.3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: none;
+  animation-play-state: running; */
+}
+/* @keyframes from-right-before {
+  from {
+    top: 0;
+  }
+  to {
+    top: 45vw;
+    background-color: orange;
+  }
+} */
