@@ -77,10 +77,9 @@ animation-play-state: running
   }
 }
 .menu-first .bars {
-  background-color: blue;
   height: 2rem;
   width: 2rem;
-  /* position: absolute; */
+  position: absolute;
 }
 
 /* second menu */
