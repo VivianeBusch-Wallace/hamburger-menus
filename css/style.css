@@ -81,6 +81,7 @@ animation-play-state: running
   height: 2rem;
   width: 2rem;
   /* position: absolute; */
+  margin: 0.33rem;
 }
 
 /* second menu */
@@ -158,6 +159,51 @@ animation-play-state: running
   }
 }
 
-.menu-fourth {
+/* fourth menu */
+.menu-fourth:hover {
   background-color: rgb(238, 158, 101);
+  transform: scale(1.3);
+  transition-duration: 1s;
+}
+/* without transition duration the transition does not take effect */
+
+/* fifth menu */
+.menu-fifth {
+  animation-name: fifth;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  position: relative;
+}
+@keyframes fifth {
+  0% {
+    /* transform: rotate(0); */
+    transform: translateX(0);
+    transition-duration: 1s;
+  }
+  25% {
+    /* transform: rotate(90deg); */
+    transform: translateX(-500px);
+    transition-duration: 1s;
+  }
+  50% {
+    /* transform: rotate(180deg); */
+    transform: translate(-500px, -500px);
+    transition-duration: 1s;
+  }
+  75% {
+    /* transform: rotate(270deg); */
+    transform: translate(0, -500px);
+    transition-duration: 1s;
+  }
+  100% {
+  }
+}
+
+.menu-fifth .bars {
+  transform: rotate(360deg);
+  transition-duration: 6s;
+  /* transition: 7s; */
+  transition-delay: 0.7s;
 }
