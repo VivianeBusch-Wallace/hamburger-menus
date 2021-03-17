@@ -5,6 +5,7 @@
 }
 :root {
   font-size: 16px;
+  --light-gray: rgb(136, 136, 136);
 }
 body {
   height: 100vh;
@@ -37,7 +38,7 @@ body,
 .bars {
   width: 8rem;
   height: 1rem;
-  background-color: rgb(56, 53, 53);
+  background-color: var(--light-gray);
   border-radius: 5rem;
   z-index: 3;
 }
@@ -155,4 +156,8 @@ animation-play-state: running
     left: 45vw;
     background-color: orange;
   }
+}
+
+.menu-fourth {
+  background-color: rgb(238, 158, 101);
 }
