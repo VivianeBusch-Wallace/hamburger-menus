@@ -22,8 +22,8 @@ body,
 /* hamburger menus */
 .menus-container {
   width: 31vw;
-  height: 30vw;
-  border: brown solid 3px;
+  height: 31vw;
+  border: var(--light-gray) solid 0.5rem;
   /* position: absolute; */
 }
 .menu {
@@ -80,7 +80,6 @@ animation-play-state: running
 .menu-first .bars {
   height: 2rem;
   width: 2rem;
-  /* position: absolute; */
   margin: 0.33rem;
 }
 
@@ -160,12 +159,31 @@ animation-play-state: running
 }
 
 /* fourth menu */
+.menu-fourth {
+  flex-direction: column;
+}
+.menu-fourth .bars {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.33rem;
+  background-color: var(--light-gray);
+  border-radius: 5rem;
+  z-index: 3;
+}
 .menu-fourth:hover {
   background-color: rgb(238, 158, 101);
   transform: scale(1.3);
   transition-duration: 1s;
+  z-index: 5;
 }
-/* without transition duration the transition does not take effect */
+.menu-fourth:hover .bars {
+  width: 8rem;
+  height: 1rem;
+  transition-duration: 2s;
+  background-color: var(--light-gray);
+  border-radius: 5rem;
+  z-index: 3;
+}
 
 /* fifth menu */
 .menu-fifth {
@@ -176,26 +194,28 @@ animation-play-state: running
   animation-timing-function: linear;
   position: relative;
 }
+/* without transition duration or animation duration the transition does not take effect */
+
 @keyframes fifth {
   0% {
     /* transform: rotate(0); */
     transform: translateX(0);
-    transition-duration: 1s;
+    transition-duration: 0.3s;
   }
   25% {
     /* transform: rotate(90deg); */
     transform: translateX(-500px);
-    transition-duration: 1s;
+    transition-duration: 0.3s;
   }
   50% {
     /* transform: rotate(180deg); */
     transform: translate(-500px, -500px);
-    transition-duration: 1s;
+    transition-duration: 0.3s;
   }
   75% {
     /* transform: rotate(270deg); */
     transform: translate(0, -500px);
-    transition-duration: 1s;
+    transition-duration: 0.3s;
   }
   100% {
   }
@@ -206,4 +226,65 @@ animation-play-state: running
   transition-duration: 6s;
   /* transition: 7s; */
   transition-delay: 0.7s;
+}
+
+/* dice */
+.dice-container,
+.dice,
+.two-eyes,
+.three-eyes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.dice-container {
+  width: 19vw;
+  height: 14vw;
+  background-color: var(--light-gray);
+}
+.dice {
+  width: 6rem;
+  height: 6rem;
+  background-color: mediumspringgreen;
+  border: navy 3px solid;
+  /* padding: 0.5rem; */
+}
+.eyes {
+  width: 1rem;
+  height: 1rem;
+  background-color: mintcream;
+  border-radius: 50%;
+  border: navy solid 1px;
+}
+/* first die */
+/* .dice-first .eye1 {
+} */
+
+/* second die */
+/* .dice-second,
+.two-eyes {
+  justify-content: space-between;
+  align-items: flex-start;
+} */
+.dice-second .eye2 {
+  align-self: flex-end;
+}
+.two-eyes {
+  display: flex;
+  justify-content: space-between;
+  border: navy 2px dashed;
+  width: 10rem;
+  transform: rotate(-45deg);
+}
+
+/* third die */
+.three-eyes {
+  transform: rotate(-45deg);
+  border: navy 2px dashed;
+  width: 10rem;
+  justify-content: space-between;
+}
+.three-eyes .eye1 {
+  align-self: flex-start;
 }
