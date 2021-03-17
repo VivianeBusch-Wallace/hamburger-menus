@@ -72,7 +72,7 @@ animation-play-state: running
     bottom: 0;
   }
   to {
-    bottom: 40vh;
+    bottom: 45vh;
     background-color: coral;
   }
 }
@@ -97,7 +97,7 @@ animation-play-state: running
     left: 0;
   }
   to {
-    bottom: 40vh;
+    bottom: 45vh;
     left: 10vw;
     background-color: green;
   }
@@ -106,48 +106,49 @@ animation-play-state: running
 /* third menu */
 .menu-third {
   position: relative;
-  z-index: 2;
   background-color: teal;
-  animation-name: from-right;
-  animation-duration: 2.3s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-}
-@keyframes from-right {
-  from {
-    left: 0;
-  }
-  to {
-    left: 45vw;
-    background-color: yellow;
-  }
-}
-
-.menu-third::before {
-  content: "";
-  background-color: violet;
-  position: absolute;
-  transform: translateY(-1%);
-  z-index: 1;
-  /* animation-name: from-right-before;
-  animation-duration: 2.3s;
+  z-index: 5;
+  animation-name: from-top;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-fill-mode: none;
-  animation-play-state: running; */
+  animation-play-state: running;
 }
-/* @keyframes from-right-before {
+@keyframes from-top {
   from {
-    top: 0;
+    bottom: 0;
   }
   to {
-    top: 45vw;
+    bottom: 45vw;
+    background-color: yellow;
+  }
+}
+.menu-third::before {
+  content: "";
+  background-color: violet;
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  /* transform: translateY(-1%); */
+  z-index: -1;
+  animation-name: from-right-before;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+@keyframes from-right-before {
+  from {
+    left: 0;
+  }
+  to {
+    left: 45vw;
     background-color: orange;
   }
-} */
+}
