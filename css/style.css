@@ -301,7 +301,7 @@ animation-play-state: running
 }
 
 /* animation for when clicked */
-/* .menu-sixth .bars {
+/* .menu-sixth:active .bars {
   position: relative;
   animation-name: sound-bars;
   animation-duration: 2s;
@@ -318,10 +318,11 @@ animation-play-state: running
     opacity: 0;
   }
   to {
-    background-color: palevioletred;
+    background-color: yellow;
     opacity: 1;
   }
 } */
+/* this is actually a setting for my JS part, but need to figure out how to add keyframes to JS */
 
 /* --------------------- */
 /* dice */

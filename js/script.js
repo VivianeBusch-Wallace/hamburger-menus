@@ -58,15 +58,16 @@ document.querySelector(".menu-first").addEventListener("click", () => {
 // });
 
 // sixth menu:
-clicked = false;
-document.querySelector(".menu-sixth").addEventListener("click", () => {
-  clicked = !clicked;
-  if (clicked) {
-    document.querySelector(".menu-sixth .line1").style.cssText =
-      "position: relative; animation-name: sound-bars; animation-duration: 2s; animation-timing-function: ease-out; animation-iteration-count: infinite; animation-delay: 0s; animation-direction: alternate; animation-fill-mode: none; animation-play-state: running;";
-    document.querySelector(".menu-sixth .line2").style.cssText =
-      "position: relative; animation-name: sound-bars; animation-duration: 2s; animation-timing-function: ease-out; animation-iteration-count: infinite; animation-delay: 0s; animation-direction: alternate; animation-fill-mode: none; animation-play-state: running;";
-    document.querySelector(".menu-sixth .line3").style.cssText =
-      "position: relative; animation-name: sound-bars; animation-duration: 2s; animation-timing-function: ease-out; animation-iteration-count: infinite; animation-delay: 0s; animation-direction: alternate; animation-fill-mode: none; animation-play-state: running;";
-  }
-});
+// clicked = false;
+// document.querySelector(".menu-sixth").addEventListener("click", () => {
+//   clicked = !clicked;
+//   if (clicked) {
+//     document.querySelector(".menu-sixth .line1").style.cssText =
+//       "position: relative; animation-name: sound-bars; animation-duration: 2s; animation-timing-function: ease-out; animation-iteration-count: infinite; animation-delay: 0s; animation-direction: alternate; animation-fill-mode: none; animation-play-state: running;";
+//     document.querySelector(".menu-sixth .line2").style.cssText =
+//       "position: relative; animation-name: sound-bars; animation-duration: 2s; animation-timing-function: ease-out; animation-iteration-count: infinite; animation-delay: 0s; animation-direction: alternate; animation-fill-mode: none; animation-play-state: running;";
+//     document.querySelector(".menu-sixth .line3").style.cssText =
+//       "position: relative; animation-name: sound-bars; animation-duration: 2s; animation-timing-function: ease-out; animation-iteration-count: infinite; animation-delay: 0s; animation-direction: alternate; animation-fill-mode: none; animation-play-state: running;";
+//   }
+// });
+// wanna add keyframes here when I know how to do it
