@@ -322,7 +322,20 @@ animation-play-state: running
     opacity: 1;
   }
 } */
-/* this is actually a setting for my JS part, but need to figure out how to add keyframes to JS */
+/* this is actually a setting for my JS part, but need to figure out how to add keyframes to JS
+right now if this was running, it'd overwrite the previous animation settings */
+
+/* seventh menu */
+.menu-seventh:hover .line1 {
+  transform: rotate(45deg) translateX(35px) translateY(35px);
+}
+.menu-seventh:hover .line3 {
+  transform: rotate(0deg) translateX(0) translateY(0);
+}
+
+/* eigth menu */
+
+/* ninth menu */
 
 /* --------------------- */
 /* dice */
