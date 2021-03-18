@@ -18,13 +18,13 @@ body,
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 /* hamburger menus general*/
 .menus-container {
   width: 31vw;
   height: 31vw;
   border: var(--light-gray) solid 0.5rem;
-  /* position: absolute; */
 }
 .menu {
   width: 10rem;
@@ -32,7 +32,6 @@ body,
   background-color: rgb(174, 225, 245);
   padding: 1rem;
   cursor: pointer;
-  /* position: relative; */
 }
 /* moving box always needs position:absolute ?????*/
 
@@ -83,10 +82,11 @@ animation-play-state: running
   width: 2rem;
   margin: 0.33rem;
 }
-.menu-first:hover .bars {
+/* .menu-first:hover .bars {
   scale: 1.5;
+  background-color: hotpink;
   cursor: pointer;
-}
+} */
 
 /* second menu */
 .menu-second {
@@ -258,23 +258,24 @@ animation-play-state: running
 .dice {
   width: 6rem;
   height: 6rem;
-  background-color: darkorange;
-  border: navy 3px solid;
+  background-color: rgb(246, 46, 46);
+  /* border: navy 3px solid; */
 }
 .eyes {
   width: 1rem;
   height: 1rem;
   background-color: mintcream;
   border-radius: 50%;
-  border: navy solid 1px;
+  /* border: navy solid 1px; */
 }
 /* shared properties of eyes's parent containers */
 .two-eyes,
 .three-eyes,
 .eyes-row {
   display: flex;
-  border: navy 2px dashed;
+  /* border: navy 2px dashed; */
   justify-content: space-between;
+  width: 5.5rem;
 }
 
 /* first die no individual setting */
@@ -285,19 +286,17 @@ animation-play-state: running
 }
 .two-eyes {
   transform: rotate(-45deg);
-  width: 10rem;
 }
 
 /* third die */
 .three-eyes {
   transform: rotate(-45deg);
-  border: navy 2px dashed;
-  width: 10rem;
+  /* border: navy 2px dashed; */
 }
 
 /* fourth die */
 .eyes-row {
-  width: 5rem;
+  width: 4rem;
 }
 
 /* fifth die */

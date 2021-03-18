@@ -46,6 +46,9 @@ document.querySelector(".menu-first").addEventListener("click", () => {
 });
 // gonna use loop for this later
 
+// second menu:
+
+// fourth menu:
 // document.querySelector(".menu-fourth").addEventListener("click", () => {
 //   clicked = !clicked;
 //   if (clicked) {
