@@ -235,6 +235,7 @@ animation-play-state: running
 }
 
 /* sixth menu */
+/* animation for each bar */
 .menu-sixth:hover .line1 {
   position: relative;
   animation-name: sound-bar1;
@@ -256,7 +257,6 @@ animation-play-state: running
     background-color: palevioletred;
   }
 }
-
 .menu-sixth:hover .line2 {
   position: relative;
   animation-name: sound-bar2;
@@ -278,7 +278,6 @@ animation-play-state: running
     background-color: palevioletred;
   }
 }
-
 .menu-sixth:hover .line3 {
   position: relative;
   animation-name: sound-bar3;
@@ -300,6 +299,29 @@ animation-play-state: running
     background-color: palevioletred;
   }
 }
+
+/* animation for when clicked */
+/* .menu-sixth .bars {
+  position: relative;
+  animation-name: sound-bars;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: paused;
+}
+@keyframes sound-bars {
+  from {
+    background-color: palevioletred;
+    opacity: 0;
+  }
+  to {
+    background-color: palevioletred;
+    opacity: 1;
+  }
+} */
 
 /* --------------------- */
 /* dice */
