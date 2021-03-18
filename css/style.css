@@ -262,16 +262,18 @@ animation-play-state: running
   border-radius: 50%;
   border: navy solid 1px;
 }
-/* first die */
-/* .dice-first .eye1 {
-} */
+/* shared properties of eyes's parent containers */
+.two-eyes,
+.three-eyes,
+.eyes-row {
+  display: flex;
+  border: navy 2px dashed;
+  justify-content: space-between;
+}
+
+/* first die no special setting */
 
 /* second die */
-/* .dice-second,
-.two-eyes {
-  justify-content: space-between;
-  align-items: flex-start;
-} */
 .dice-second .eye2 {
   align-self: flex-end;
 }
@@ -280,26 +282,14 @@ animation-play-state: running
   width: 10rem;
 }
 
-/* shared properties between second and fourth die */
-.two-eyes,
-.eyes-column {
-  display: flex;
-  justify-content: space-between;
-  border: navy 2px dashed;
-}
-
 /* third die */
 .three-eyes {
   transform: rotate(-45deg);
   border: navy 2px dashed;
   width: 10rem;
-  justify-content: space-between;
 }
-/* .three-eyes .eye1 {
-  align-self: flex-start;
-} */
 
 /* fourth die */
-.eyes-column {
+.eyes-row {
   width: 5rem;
 }
