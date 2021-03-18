@@ -42,6 +42,7 @@ document.querySelector(".menu-first").addEventListener("click", () => {
       "background-color: var(--light-gray);";
   }
 });
+// gonna use loop for this later
 
 // document.querySelector(".menu-fourth").addEventListener("click", () => {
 //   clicked = !clicked;
