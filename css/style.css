@@ -327,11 +327,16 @@ right now if this was running, it'd overwrite the previous animation settings */
 
 /* seventh menu */
 .menu-seventh:hover .line1 {
-  transform: rotate(45deg) translateX(35px) translateY(35px);
+  transform: rotate(0deg) translateX(0) translateY(0);
+}
+.menu-seventh:hover .line2 {
+  transform: rotate(360deg);
+  transition: 2s linear;
 }
 .menu-seventh:hover .line3 {
   transform: rotate(0deg) translateX(0) translateY(0);
 }
+/* not finished */
 
 /* eigth menu */
 
