@@ -180,6 +180,7 @@ animation-play-state: running
   transform: scale(1.3);
   transition-duration: 1s;
   z-index: 5;
+  box-shadow: grey 0rem 0.4rem 0.6rem;
 }
 .menu-fourth:hover .bars {
   width: 8rem;
@@ -225,7 +226,6 @@ animation-play-state: running
   100% {
   }
 }
-
 .menu-fifth .bars {
   transform: rotate(360deg);
   transition-duration: 6s;
@@ -233,6 +233,13 @@ animation-play-state: running
   transition-delay: 0.7s;
 }
 
+/* sixth menu */
+.menu-sixth:hover .line2 {
+  margin-right: 4rem;
+  transition: 1s ease-in;
+}
+
+/* --------------------- */
 /* dice */
 .dice-container,
 .dice,
@@ -251,9 +258,8 @@ animation-play-state: running
 .dice {
   width: 6rem;
   height: 6rem;
-  background-color: mediumspringgreen;
+  background-color: darkorange;
   border: navy 3px solid;
-  /* padding: 0.5rem; */
 }
 .eyes {
   width: 1rem;
@@ -271,7 +277,7 @@ animation-play-state: running
   justify-content: space-between;
 }
 
-/* first die no special setting */
+/* first die no individual setting */
 
 /* second die */
 .dice-second .eye2 {
@@ -293,3 +299,43 @@ animation-play-state: running
 .eyes-row {
   width: 5rem;
 }
+
+/* fifth die */
+/* using grid here to practice grid */
+.dice-fifth {
+  display: grid;
+  /* position: absolute; */
+  /* height: 6rem;
+  width: 6rem; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "eye1 . eye2"
+    ". eye3 ."
+    "eye1 . eye5";
+}
+.dice-fifth .eye1 {
+  /* position: absolute; */
+  background-color: darkorchid;
+  grid-area: eye1;
+}
+.dice-fifth .eye2 {
+  /* position: absolute; */
+  background-color: darkred;
+  grid-area: eye2;
+}
+.dice-fifth .eye3 {
+  background-color: deepskyblue;
+  grid-area: eye3;
+}
+.dice-fifth .eye4 {
+  grid-area: eye4;
+  background-color: forestgreen;
+}
+.dice-fifth .eye5 {
+  grid-area: eye5;
+}
+
+/* sixth die has no individual setting */
