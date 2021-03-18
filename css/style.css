@@ -40,7 +40,7 @@ body,
   height: 1rem;
   background-color: var(--light-gray);
   border-radius: 5rem;
-  z-index: 3;
+  z-index: 2;
 }
 
 /* animations */
@@ -117,7 +117,7 @@ animation-play-state: running
 /* third menu */
 .menu-third {
   position: relative;
-  /* background-color: teal; */
+  /* adjust z-index! */
   z-index: 5;
   animation-name: from-top;
   animation-duration: 1.7s;
@@ -229,34 +229,35 @@ animation-play-state: running
 }
 .menu-fifth .bars {
   transform: rotate(720deg);
-  transition-timing-function: linear;
+  transition-timing-function: ease-in;
   transition-duration: 6s;
-  transition-delay: 0.7s;
+  transition-delay: 0.3s;
 }
 
 /* sixth menu */
 .menu-sixth:hover .line2 {
   /* margin-right: 4rem; */
   /* transition: 0.5s ease-in-out; */
-  /* position: absolute; */
+  position: relative;
   animation-name: sound-bars;
   animation-duration: 1s;
   animation: ease-in-out;
   animation-iteration-count: 2;
   animation-delay: 0s;
-  /* animation-direction: reverse; */
+  animation-direction: normal;
   animation-fill-mode: none;
   animation-play-state: running;
 }
-
 @keyframes sound-bars {
   from {
     /* margin-right: 0; */
     width: 7.5rem;
+    background-color: var(--light-gray);
   }
   to {
     /* margin-right: 4rem; */
     width: 4rem;
+    background-color: hotpink;
   }
 }
 
