@@ -1,4 +1,6 @@
 let clicked = false;
+
+// first menu:
 document.querySelector(".menu-first").addEventListener("click", () => {
   clicked = !clicked;
   console.log(clicked);
