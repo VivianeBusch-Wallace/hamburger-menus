@@ -373,9 +373,10 @@ right now if this was running, it'd overwrite the previous animation settings */
 /* shared properties of eyes's parent containers */
 .two-eyes,
 .three-eyes,
-.eyes-row {
+.eyes-row,
+.fifth-eyes {
   display: flex;
-  /* border: navy 2px dashed; */
+  border: navy 2px dashed;
   justify-content: space-between;
   width: 5.5rem;
 }
@@ -402,43 +403,45 @@ right now if this was running, it'd overwrite the previous animation settings */
 
 /* fifth die */
 /* using grid here to practice grid */
-.dice-fifth {
-  display: grid;
-  position: relative;
+.dicey {
+  display: flex;
+  /* position: relative; */
   height: 6rem;
   width: 6rem;
-  /* justify-content: space-between; */
-  justify-items: center;
-  /* align-items: center; */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    "eye1 . eye2"
-    ". eye3 ."
-    "eye1 . eye5";
+  background-color: red;
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-items: center; */
+  align-items: center;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  /* grid-template-areas:
+    "eye1 eye2 eye2"
+    "eye3 eye3 eye4"
+    "eye1 eye5 eye5"; */
 }
 .dice-fifth .eyes {
-  position: absolute;
+  /* position: absolute; */
 }
-.dice-fifth .eye1 {
+.dicey .eye1 {
   /* position: absolute; */
   background-color: darkorchid;
   grid-area: eye1;
 }
-.dice-fifth .eye2 {
+.dicey .eye2 {
   /* position: absolute; */
   background-color: darkred;
   grid-area: eye2;
 }
-.dice-fifth .eye3 {
+.dicey .eye3 {
   background-color: deepskyblue;
   grid-area: eye3;
 }
-.dice-fifth .eye4 {
+.dicey .eye4 {
   grid-area: eye4;
   background-color: forestgreen;
 }
-.dice-fifth .eye5 {
+.dicey .eye5 {
   grid-area: eye5;
 }
 
