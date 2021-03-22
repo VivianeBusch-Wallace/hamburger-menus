@@ -331,14 +331,29 @@ right now if this was running, it'd overwrite the previous animation settings */
   transform: rotate(0deg) translateX(0) translateY(0);
 }
 .menu-seventh:hover .line2 {
-  transform: rotate(360deg);
-  transition: 2s linear;
+  /* transform: rotate(360deg);
+  transition: 2s linear; */
+  animation: disappear 1s ease-in none 1;
 }
+@keyframes disappear {
+  from {
+    /* left: 0; */
+    transform: translateX(0rem);
+    background-color: chartreuse;
+  }
+  to {
+    /* left: -30rem; */
+    transform: translateX(-30rem);
+    background-color: transparent;
+  }
+}
+/* questions: why does the position left/right not work? */
 .menu-seventh:hover .line3 {
   transform: rotate(-45deg) translate(2.5rem, -2rem);
   width: 15rem;
   transition: 1s;
 }
+/* questions: why does the width not change? */
 /* not finished */
 
 /* eighth menu */
