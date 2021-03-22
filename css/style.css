@@ -41,6 +41,7 @@ body,
   background-color: var(--light-gray);
   border-radius: 5rem;
   z-index: 2;
+  /* position: relative; */
 }
 
 /* animations */
@@ -66,7 +67,7 @@ animation-play-state: running
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-fill-mode: none;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 @keyframes drop-down {
   from {
@@ -98,7 +99,7 @@ animation-play-state: running
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-fill-mode: none;
-  animation-play-state: paused;
+  animation-play-state: running;
   transform: rotate(-180deg);
   transition-duration: 2s;
 }
@@ -126,7 +127,7 @@ animation-play-state: running
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-fill-mode: none;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 @keyframes from-top {
   from {
@@ -151,7 +152,7 @@ animation-play-state: running
   animation-iteration-count: 1;
   animation-direction: reverse;
   animation-fill-mode: none;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 @keyframes from-right-before {
   from {
@@ -199,7 +200,7 @@ animation-play-state: running
   animation-iteration-count: 1;
   animation-timing-function: linear;
   position: relative;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 /* without transition duration or animation duration the transition does not take effect */
 
@@ -310,7 +311,7 @@ animation-play-state: running
   animation-delay: 0s;
   animation-direction: alternate;
   animation-fill-mode: none;
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 @keyframes sound-bars {
   from {
@@ -334,16 +335,18 @@ right now if this was running, it'd overwrite the previous animation settings */
   transition: 2s linear;
 }
 .menu-seventh:hover .line3 {
-  transform: rotate(0deg) translateX(0) translateY(0);
+  transform: rotate(-45deg) translate(2.5rem, -2rem);
+  width: 15rem;
+  transition: 1s;
 }
 /* not finished */
 
-/* eigth menu */
+/* eighth menu */
 
 /* ninth menu */
 
 /* --------------------- */
-/* dice */
+/* dice general and shared properties */
 .dice-container,
 .dice,
 .two-eyes,
@@ -373,10 +376,9 @@ right now if this was running, it'd overwrite the previous animation settings */
 /* shared properties of eyes's parent containers */
 .two-eyes,
 .three-eyes,
-.eyes-row,
-.fifth-eyes {
+.eyes-row {
   display: flex;
-  border: navy 2px dashed;
+  /* border: navy 2px dashed; */
   justify-content: space-between;
   width: 5.5rem;
 }
@@ -402,46 +404,44 @@ right now if this was running, it'd overwrite the previous animation settings */
 }
 
 /* fifth die */
-/* using grid here to practice grid */
-.dicey {
-  display: flex;
+/* using grid here to practice grid BUT IT DOES NOT WORK (no idea why) */
+.dice-fifth {
+  display: grid;
   /* position: relative; */
   height: 6rem;
   width: 6rem;
-  background-color: red;
-  flex-direction: column;
-  justify-content: space-between;
-  /* justify-items: center; */
-  align-items: center;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* grid-template-rows: 1fr 1fr 1fr; */
-  /* grid-template-areas:
-    "eye1 eye2 eye2"
-    "eye3 eye3 eye4"
-    "eye1 eye5 eye5"; */
+  /* justify-content: space-between; */
+  justify-items: center;
+  /* align-items: center; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "eye1 . eye2"
+    ". eye3 ."
+    "eye1 . eye5";
 }
 .dice-fifth .eyes {
-  /* position: absolute; */
+  position: absolute;
 }
-.dicey .eye1 {
+.dice-fifth .eye1 {
   /* position: absolute; */
   background-color: darkorchid;
   grid-area: eye1;
 }
-.dicey .eye2 {
+.dice-fifth .eye2 {
   /* position: absolute; */
   background-color: darkred;
   grid-area: eye2;
 }
-.dicey .eye3 {
+.dice-fifth .eye3 {
   background-color: deepskyblue;
   grid-area: eye3;
 }
-.dicey .eye4 {
+.dice-fifth .eye4 {
   grid-area: eye4;
   background-color: forestgreen;
 }
-.dicey .eye5 {
+.dice-fifth .eye5 {
   grid-area: eye5;
 }
 
