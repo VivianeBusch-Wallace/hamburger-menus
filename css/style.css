@@ -15,7 +15,7 @@ body,
 .menus-container,
 .menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
@@ -327,18 +327,16 @@ animation-play-state: running
 right now if this was running, it'd overwrite the previous animation settings */
 
 /* seventh menu */
-.menu-seventh:hover .line1,
+/* .menu-seventh:hover .line1,
 .menu-seventh:hover .line3 {
   transition: 1s;
-  transition-delay: 1s;
+  transition-delay: 0.2s;
   width: 10rem;
   height: 1rem;
-}
-
-.menu-seventh:hover .line1 {
-  /* transform: rotate(45deg) translateX(3rem) translateY(1.6rem); */
+} */
+/* .menu-seventh:hover .line1 {
   transform: rotate(45deg) translate(2.2rem, 2.4rem);
-}
+} */
 .menu-seventh:hover .line2 {
   /* transform: rotate(360deg);
   transition: 2s linear; */
@@ -359,10 +357,10 @@ right now if this was running, it'd overwrite the previous animation settings */
   }
 }
 /* questions: why does the position left/right not work? */
-.menu-seventh:hover .line3 {
+/* .menu-seventh:hover .line3 {
   transform: rotate(-45deg) translate(2.2rem, -2.4rem);
-}
-/* questions: why does the width not change? */
+} */
+/* questions: why does the width not change? --> because of padding of parent element*/
 /* not finished */
 
 /* eighth menu */
