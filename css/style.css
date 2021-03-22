@@ -30,7 +30,7 @@ body,
   width: 10rem;
   height: 10rem;
   background-color: rgb(174, 225, 245);
-  padding: 1rem;
+  /* padding: 1rem 0; */
   cursor: pointer;
 }
 /* moving box always needs position:absolute ?????*/
@@ -328,7 +328,12 @@ right now if this was running, it'd overwrite the previous animation settings */
 
 /* seventh menu */
 .menu-seventh:hover .line1 {
-  transform: rotate(0deg) translateX(0) translateY(0);
+  /* transform: rotate(45deg) translateX(3rem) translateY(1.6rem); */
+  transform: rotate(45deg) translateX(0rem) translateY(1.6rem);
+
+  transition: 1s;
+  width: 9rem;
+  height: 1rem;
 }
 .menu-seventh:hover .line2 {
   /* transform: rotate(360deg);
@@ -343,14 +348,15 @@ right now if this was running, it'd overwrite the previous animation settings */
   }
   to {
     /* left: -30rem; */
-    transform: translateX(-30rem);
+    transform: translateX(-15rem);
     background-color: transparent;
   }
 }
 /* questions: why does the position left/right not work? */
 .menu-seventh:hover .line3 {
-  transform: rotate(-45deg) translate(2.5rem, -2rem);
-  width: 15rem;
+  width: 9rem;
+  height: 1rem;
+  transform: rotate(-45deg) translate(2.4rem, -1.6rem);
   transition: 1s;
 }
 /* questions: why does the width not change? */
