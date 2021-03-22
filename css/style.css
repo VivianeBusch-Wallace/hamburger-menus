@@ -330,6 +330,7 @@ right now if this was running, it'd overwrite the previous animation settings */
 .menu-seventh:hover .line1,
 .menu-seventh:hover .line3 {
   transition: 1s;
+  transition-delay: 1s;
   width: 10rem;
   height: 1rem;
 }
@@ -342,6 +343,8 @@ right now if this was running, it'd overwrite the previous animation settings */
   /* transform: rotate(360deg);
   transition: 2s linear; */
   animation: disappear 1s ease-in none 1;
+  animation-fill-mode: forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 @keyframes disappear {
   from {
